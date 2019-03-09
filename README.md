@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a sample app that was created when installing and learning to use Ruby and Ruby on Rails. I am Courtney Holmes, and I'm learning to code. Thanks for stopping by.
 
 Things you may want to cover:
 
