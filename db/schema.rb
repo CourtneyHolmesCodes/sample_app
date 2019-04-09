@@ -12,7 +12,14 @@
 
 ActiveRecord::Schema.define(version: 2019_04_07_174412) do
 
-# Could not dump table "products" because of following StandardError
-#   Unknown type 'deciml' for column 'price'
+  create_table "products", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image_url"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "color"
+    t.decimal "price"
+  end
 
 end
