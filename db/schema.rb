@@ -10,14 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_03_132626) do
+ActiveRecord::Schema.define(version: 2019_04_07_174412) do
 
-  create_table "products", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.string "image_url"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "products" because of following StandardError
+#   Unknown type 'deciml' for column 'price'
 
 end
