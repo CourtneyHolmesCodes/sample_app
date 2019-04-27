@@ -1,11 +1,14 @@
+
 class OrdersController < ApplicationController
  end
 
 class OrdersController < ApplicationController
   def index
+    @orders = Orders.includes(:product).all
   end
 
   def Show
+    @orders = Orders.find(params[:id])
   end
 
   def new
@@ -16,4 +19,4 @@ class OrdersController < ApplicationController
 
   def destroy
   end
-end 
+end
