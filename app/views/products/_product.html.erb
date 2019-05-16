@@ -1,11 +1,7 @@
-<div class="row">
-    <div class="col-sm">
-    <% @products.each do |product| %>
-      <%= render partial: 'form', locals: { product: product } %>
-      <%= link_to product.image_url %>
-      <h1><%= link_to product.name, product %></h1>
-      <p><%= product.description %></p>
-      <strong>$ <%= product.price %></strong>
-    </div><!-- /col -->
-  <% end %>
+
+<div class="col-sm">
+  <%= image_tag(product.image_url, class: "img-responsive") unless product.image_url.blank? %>
+  <h2><%= link_to product.name, product %></h2>
+  <p><%= product.description %></p>
+  <strong>$ <%= product.price %></strong>
 </div>
