@@ -4,8 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+  if params[:q]
+    search_term = params[:q]
+    @products = Product.where("name LIKE ?", "%#{search_term}%")
+  else
     @products = Product.all
   end
+end
 
   # GET /products/1
   # GET /products/1.json
@@ -29,7 +34,7 @@ class ProductsController < ApplicationController
     respond_to do |format|
       if @product.save
         # redirect user to a previous page
-        format.html { redirect_back, notice: 'Product was successfully created.' }
+        format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
         format.html { render :new }
